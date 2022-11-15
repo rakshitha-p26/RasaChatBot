@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - corona_states_stat
+  - location_entry
+  - corona_stats_check
+  - Thanks
+
+
+actions:
+  - actions_corona_state_stat
+
+
+
+entities:
+  - state
+
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! Welcome to Corona Tracker"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "GoodBye! Hope To See You Soon !\nJust Type 'hey' or 'hi' anytime :))"
+
+  utter_iamabot:
+  - text: "I am a COVID-19 Stats bot\n"
+
+  utter_country_entry:
+  - text: "Can You Please Enter Your Current State From India?"
+
+  utter_corona_stats_check:
+  - text: "Covid-19 Tracker [India] :\nPlease Enter the State name you wish to see the Covid-19 Statistics : "
+
+  utter_Thanks:
+  - text: "Your Welcome . Glad I could be of some help!\nJust type 'hey' or 'hi' again to redirect to the main phase of bot ! :))"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
